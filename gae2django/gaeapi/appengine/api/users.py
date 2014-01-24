@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.contrib.auth.models import User
+import urllib
 
 
 def get_current_user():
@@ -15,11 +16,11 @@ def is_current_user_admin():
 
 
 def create_login_url(redirect):
-    return settings.LOGIN_URL+'?next='+redirect
+    return settings.LOGIN_URL+'?next=' + urllib.quote(redirect)
 
 
 def create_logout_url(redirect):
-    return settings.LOGOUT_URL+'?next='+redirect
+    return settings.LOGOUT_URL+'?next=' + urllib.quote(redirect)
 
 
 class Error(Exception):

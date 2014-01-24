@@ -11,3 +11,5 @@ examples/rietveld/rietveld.hg
 
 # ignore local copies of django
 django/
+*.pyc
+*.egg-info
