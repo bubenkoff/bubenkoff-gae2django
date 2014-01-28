@@ -4,7 +4,7 @@
 
 import os
 
-from distutils.core import setup
+from setuptools import setup
 
 
 def find_packages(base_dir):
@@ -20,7 +20,7 @@ def find_packages(base_dir):
 
 setup(
     name='django-gae2django',
-    version='0.1',
+    version='0.2paylogic1',
     description='Django-based implementation of App Engine APIs',
     author='Andi Albrecht',
     author_email='albrecht.andi@gmail.com',
@@ -37,6 +37,5 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 2.5',
         'Programming Language :: Python :: 2.6',
-        ],
+    ],
 )
-
