@@ -42,7 +42,7 @@ class Query(QuerySet):
         self.keys_only = False
 
     def filter(self, *args, **kwds):
-        if kwds:
+        if kwds or not args:
             return super(Query, self).filter(*args, **kwds)
         property_operator, value = args
         if isinstance(value, basestring):
